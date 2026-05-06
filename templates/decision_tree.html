@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decision Tree - HeartCare AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dt">
+<nav>
+  <div class="logo">Heart<span>Care</span> AI</div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/decision-tree">Decision Tree</a></li>
+    <li><a href="/logistic-regression">Logistic Regression</a></li>
+    <li><a href="/svm">SVM</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h2><span>Decision Tree</span> Prediction</h2>
+  <p class="subtitle">Fill in the patient details below to predict heart disease risk.</p>
+
+  <form id="predictForm">
+    <div class="field">
+      <label>Age</label>
+      <input type="number" name="age" placeholder="e.g. 45" required min="1" max="120">
+    </div>
+    <div class="field">
+      <label>Sex</label>
+      <select name="sex" required>
+        <option value="">Select</option>
+        <option>Male</option><option>Female</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Chest Pain Type</label>
+      <select name="chest_pain" required>
+        <option value="">Select</option>
+        <option>Typical Angina</option>
+        <option>Atypical Angina</option>
+        <option>Non-Anginal Pain</option>
+        <option>Asymptomatic</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Resting Blood Pressure (mm Hg)</label>
+      <input type="number" name="resting_bp" placeholder="e.g. 120" required>
+    </div>
+    <div class="field">
+      <label>Cholesterol (mg/dL)</label>
+      <input type="number" step="0.1" name="cholesterol" placeholder="e.g. 200" required>
+    </div>
+    <div class="field">
+      <label>Fasting Blood Sugar</label>
+      <select name="fastingbs" required>
+        <option value="">Select</option>
+        <option value=">120">&gt; 120 mg/dL</option>
+        <option value="<=120">&le; 120 mg/dL</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Resting ECG</label>
+      <select name="resting_ecg" required>
+        <option value="">Select</option>
+        <option>Normal</option>
+        <option>ST-T Wave Abnormalities</option>
+        <option>Left Ventricular Hypertrophy</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Max Heart Rate</label>
+      <input type="number" name="max_hr" placeholder="e.g. 150" required>
+    </div>
+    <div class="field">
+      <label>Exercise Induced Angina</label>
+      <select name="exercise_angina" required>
+        <option value="">Select</option>
+        <option>Yes</option><option>No</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Oldpeak (ST depression)</label>
+      <input type="number" step="0.1" name="oldpeak" placeholder="e.g. 1.0" required>
+    </div>
+    <div class="field full">
+      <label>ST Slope</label>
+      <select name="st_slope" required>
+        <option value="">Select</option>
+        <option>Upsloping</option>
+        <option>Flat</option>
+        <option>DownSloping</option>
+      </select>
+    </div>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script>
+document.getElementById('predictForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const data = Object.fromEntries(fd.entries());
+  const resBox = document.getElementById('result');
+  resBox.className = ''; resBox.textContent = 'Predicting...';
+  resBox.classList.add('show');
+  try {
+    const r = await fetch('/api/predict/dt', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const json = await r.json();
+    const isDisease = json.prediction && json.prediction.toLowerCase().includes('has');
+    resBox.className = 'show ' + (isDisease ? 'disease' : 'healthy');
+    resBox.innerHTML = `<strong>${json.model}:</strong> ${json.prediction}`;
+  } catch (err) {
+    resBox.className = 'show disease';
+    resBox.textContent = 'Error: ' + err.message;
+  }
+});
+</script>
+</body>
+</html>

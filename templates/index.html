@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Heart Disease Prediction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home">
+<nav>
+  <div class="logo">Heart<span>Care</span> AI</div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/decision-tree">Decision Tree</a></li>
+    <li><a href="/logistic-regression">Logistic Regression</a></li>
+    <li><a href="/svm">SVM</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Predict <span>Heart Disease</span> with AI</h1>
+  <p>Use cutting-edge machine learning models to assess heart disease risk based on clinical parameters. Choose a model below to get started.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>🌳 Decision Tree</h3>
+      <p>Interpretable tree-based classifier that splits data on clinical features.</p>
+      <a href="/decision-tree" class="btn">Try Now</a>
+    </div>
+    <div class="card">
+      <h3>📈 Logistic Regression</h3>
+      <p>A statistical model estimating the probability of heart disease.</p>
+      <a href="/logistic-regression" class="btn">Try Now</a>
+    </div>
+    <div class="card">
+      <h3>🧠 Support Vector Machine</h3>
+      <p>Powerful classifier that finds the optimal decision boundary.</p>
+      <a href="/svm" class="btn">Try Now</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
