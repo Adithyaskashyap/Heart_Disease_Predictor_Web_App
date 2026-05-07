@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Know About Heart AI | Heart Disease Prediction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+ 
+</style>
+</head>
+<body class="know-page">
+
+<nav class="navbar">
+  <div class="brand">❤ HeartAI</div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/decision_tree">Decision Tree</a></li>
+    <li><a href="/logistic_regression">Logistic Regression</a></li>
+    <li><a href="/svm">SVM</a></li>
+    <li><a href="/know_about" style="color:#ff4d6d;">Know About Heart AI</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero-know">
+  <h1>Know About Heart Health & AI Prediction</h1>
+  <p>Understand the biological meaning behind every parameter used in the Heart Disease Prediction System.</p>
+</header>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="glass">
+    <h2>What is Heart Disease?</h2>
+    <p>The human heart continuously pumps oxygen-rich blood to all organs and tissues. Any abnormality affecting its structure, blood vessels, electrical system, or pumping ability can lead to heart disease — one of the leading causes of death worldwide.</p>
+    <p>Many heart conditions develop slowly and silently due to unhealthy lifestyle, genetics, stress, diabetes, obesity, smoking, or high cholesterol. Early prediction can significantly reduce the risk of:</p>
+    <ul>
+      <li>Heart attack</li>
+      <li>Stroke</li>
+      <li>Cardiac arrest</li>
+      <li>Heart failure</li>
+      <li>Irregular heartbeat</li>
+    </ul>
+  </div>
+</section>
+
+<!-- AI -->
+<section class="section">
+  <div class="glass">
+    <h2>How Artificial Intelligence Helps</h2>
+    <p>AI and Machine Learning algorithms analyze large volumes of medical data to identify hidden patterns that may not be visible through manual analysis. This system uses three trained ML models:</p>
+    <div class="tips">
+      <span>🌳 Decision Tree</span>
+      <span>📈 Logistic Regression</span>
+      <span>🧠 Support Vector Machine (SVM)</span>
+    </div>
+    <p style="margin-top:1.2rem;">The prediction is <em>not a final medical diagnosis</em> — it serves as an early warning and decision-support tool.</p>
+  </div>
+</section>
+<section class="section">
+  <h2 style="padding-left:.4rem;">Understanding Each Prediction Parameter</h2>
+  <div class="param-grid">
+
+    <div class="param-card"><div class="num">1</div><h4>Age</h4>
+      <p>Blood vessels lose elasticity with age and accumulate plaque. Risk increases sharply after 45, and again after 60.</p></div>
+
+    <div class="param-card"><div class="num">2</div><h4>Sex</h4>
+      <p>Men are at higher risk of early heart disease. Estrogen offers women protection until menopause, after which risk rises.</p></div>
+
+    <div class="param-card"><div class="num">3</div><h4>Chest Pain Type</h4>
+      <p>Typical Angina, Atypical Angina, Non-Anginal, or Asymptomatic — patterns help identify coronary artery disease.</p></div>
+
+    <div class="param-card"><div class="num">4</div><h4>Resting Blood Pressure</h4>
+      <p>Force of blood on artery walls. Normal: 90/60–120/80 mmHg. High BP (>140/90) damages vessels and overworks the heart.</p></div>
+
+    <div class="param-card"><div class="num">5</div><h4>Cholesterol</h4>
+      <p>Excess LDL forms plaques in arteries. Desirable: &lt;200 mg/dL. High: &gt;240 mg/dL increases heart-attack risk.</p></div>
+
+    <div class="param-card"><div class="num">6</div><h4>Fasting Blood Sugar</h4>
+      <p>High fasting glucose may signal diabetes, which damages blood vessels and elevates cardiovascular risk.</p></div>
+
+    <div class="param-card"><div class="num">7</div><h4>Resting ECG</h4>
+      <p>Measures the heart's electrical activity. Abnormalities indicate arrhythmia, enlargement, or past heart attacks.</p></div>
+
+    <div class="param-card"><div class="num">8</div><h4>Maximum Heart Rate</h4>
+      <p>Highest BPM during exertion. Abnormal values may suggest poor fitness or reduced oxygen supply.</p></div>
+
+    <div class="param-card"><div class="num">9</div><h4>Exercise-Induced Angina</h4>
+      <p>Chest pain during activity often indicates coronary blockage and elevated cardiovascular risk.</p></div>
+
+    <div class="param-card"><div class="num">10</div><h4>Oldpeak</h4>
+      <p>ST-segment depression during exercise vs rest. Higher values suggest ischemia and coronary artery disease.</p></div>
+
+    <div class="param-card"><div class="num">11</div><h4>ST Slope</h4>
+      <p>Upsloping → normal · Flat → possible abnormality · Downsloping → higher cardiac risk.</p></div>
+
+  </div>
+</section>
+
+<!-- ML WORKFLOW -->
+<section class="section">
+  <div class="glass">
+    <h2>How Machine Learning Predicts Heart Disease</h2>
+    <p>The AI compares patient inputs with patterns learned from historical medical data through this workflow:</p>
+    <div class="tips">
+      <span>1️⃣ Data Collection</span>
+      <span>2️⃣ Preprocessing</span>
+      <span>3️⃣ Feature Encoding</span>
+      <span>4️⃣ Model Training</span>
+      <span>5️⃣ Prediction</span>
+      <span>6️⃣ Result Interpretation</span>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="section">
+  <div class="glass">
+    <h2>Heart Care Tips</h2>
+    <div class="tips">
+      <span>🥗 Balanced Diet</span>
+      <span>🏃 Regular Exercise</span>
+      <span>🚭 No Smoking / Alcohol</span>
+      <span>🩺 Control Blood Pressure</span>
+      <span>🧘 Reduce Stress</span>
+      <span>📊 Monitor Cholesterol & Sugar</span>
+      <span>😴 Sleep Adequately</span>
+      <span>⚡ Stay Active</span>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="section">
+  <div class="glass disclaimer">
+    <h2>⚠ Medical Disclaimer</h2>
+    <p>This application is designed only for <strong>educational and research purposes</strong>. The prediction result should not replace professional medical diagnosis or treatment. Always consult a qualified healthcare professional for accurate medical evaluation.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Developed using <strong>Flask</strong> · REST APIs · <strong>Scikit-learn</strong> · HTML / CSS / JavaScript</p>
+  <p>© 2026 HeartAI — Educational AI Healthcare Project</p>
+</footer>
+
+</body>
+</html>
