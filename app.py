@@ -27,6 +27,9 @@ def logistic_page():
 @app.route('/svm')
 def svm_page():
     return render_template('svm.html')
+@app.route('/know_about')
+def know_heart():
+    return render_template('know_about.html')
 
 
 

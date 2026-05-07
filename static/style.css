@@ -125,3 +125,115 @@ button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 10px 25
   .hero h1 { font-size: 2.2rem; }
   nav { flex-direction: column; gap: 12px; padding: 16px; }
 }
+body.know-page::before{
+  background:
+    linear-gradient(135deg, rgba(15,23,42,.92), rgba(20,8,30,.88)),
+    url('https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+}
+
+.navbar{
+  position:sticky; top:0; z-index:50;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2.5rem;
+  background:rgba(15,23,42,.65);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.navbar .brand{
+  font-weight:700; font-size:1.25rem; color:#fff;
+  background:linear-gradient(135deg,#ff4d6d,#7b2cbf);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.navbar ul{display:flex; gap:1.6rem; list-style:none; margin:0; padding:0; flex-wrap:wrap;}
+.navbar a{color:#e2e8f0; text-decoration:none; font-weight:500; font-size:.95rem; transition:color .25s;}
+.navbar a:hover{color:#ff4d6d;}
+
+/* ---------- Hero ---------- */
+.hero-know{
+  text-align:center; padding:6rem 1.5rem 5rem;
+  max-width:1000px; margin:0 auto;
+}
+.hero-know h1{
+  font-size:clamp(2rem, 5vw, 3.6rem);
+  font-weight:800; line-height:1.15; margin:0 0 1.2rem;
+  background:linear-gradient(135deg,#ff4d6d,#38bdf8,#7b2cbf);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.hero-know p{
+  font-size:1.15rem; color:#cbd5e1; max-width:760px; margin:0 auto;
+}
+
+/* ---------- Sections / Glass cards ---------- */
+.section{
+  max-width:1100px; margin:2.5rem auto; padding:0 1.5rem;
+}
+.glass{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(18px);
+  border-radius:20px;
+  padding:2.2rem 2rem;
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+.section h2{
+  font-size:1.9rem; margin:0 0 1rem;
+  background:linear-gradient(135deg,#ff4d6d,#7b2cbf);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  display:inline-block;
+}
+.section h3{ color:#38bdf8; margin-top:1.4rem; font-weight:600;}
+.section p, .section li{ color:#e2e8f0; line-height:1.75; font-size:1rem;}
+.section ul{ padding-left:1.2rem;}
+
+/* ---------- Parameter grid ---------- */
+.param-grid{
+  display:grid; gap:1.5rem;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  margin-top:1.5rem;
+}
+.param-card{
+  background:linear-gradient(160deg, rgba(255,77,109,.12), rgba(123,44,191,.10));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:1.5rem;
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s;
+}
+.param-card:hover{
+  transform:translateY(-6px);
+  border-color:#ff4d6d;
+  box-shadow:0 16px 40px rgba(255,77,109,.25);
+}
+.param-card .num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:50%;
+  background:linear-gradient(135deg,#ff4d6d,#7b2cbf);
+  color:#fff; font-weight:700; margin-bottom:.8rem;
+}
+.param-card h4{ margin:.2rem 0 .6rem; color:#fff; font-size:1.15rem;}
+.param-card p{ color:#cbd5e1; font-size:.92rem; line-height:1.6; margin:0;}
+
+/* ---------- Tip pills ---------- */
+.tips{
+  display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1rem;
+}
+.tips span{
+  background:rgba(56,189,248,.15);
+  border:1px solid rgba(56,189,248,.35);
+  color:#bae6fd; padding:.55rem 1rem; border-radius:999px;
+  font-size:.9rem; font-weight:500;
+}
+
+/* ---------- Disclaimer ---------- */
+.disclaimer{
+  border-left:4px solid #ff4d6d;
+  background:rgba(255,77,109,.08);
+}
+
+
+footer{
+  text-align:center; padding:2.5rem 1rem;
+  color:#94a3b8; font-size:.9rem;
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:3rem;
+}
+footer strong{ color:#ff4d6d;}
