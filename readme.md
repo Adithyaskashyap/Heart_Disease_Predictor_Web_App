@@ -46,7 +46,7 @@ This section explains the biological significance of the 11 clinical parameters 
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-link>
+    git clone https://github.com/Adithyaskashyap/Heart_Disease_Predictor_Web_App.git
     cd Heart_Disease_Predictor_Web_App
     ```
 
