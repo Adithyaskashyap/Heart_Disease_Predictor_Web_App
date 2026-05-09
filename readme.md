@@ -10,16 +10,16 @@ The home interface introduces the HeartCare AI system and provides quick access 
 
 ### 2. ML Prediction Interfaces
 Each model (Decision Tree, Logistic Regression, and SVM) features a dedicated form where users can input patient metrics like Age, Cholesterol, and Max Heart Rate to receive instant risk assessments.
-> **Screenshot Link:** ![Prediction Form](assets/prediction_form.png)
-> **Screenshot Link:** ![Prediction Result](assets/prediction_result.png)
+> ![Prediction Form](assets/prediction_form.png)
+>  ![Prediction Result](assets/prediction_result.png)
 
 ### 3. Interactive AI Chatbot
 The system includes an AI-powered chatbot designed to answer user questions about heart health, interpret clinical terms, and provide guidance on using the application.
-> **Screenshot Link:** ![Chatbot Interface](assets/chatbot_page.png)
+> ![Chatbot Interface](assets/chatbot_page.png)
 
 ### 4. Educational Dashboard (Know Your Heart)
 This section explains the biological significance of the 11 clinical parameters used in the models, such as "Oldpeak" (ST depression) and "ST Slope".
-> **Screenshot Link:** ![Educational Dashboard](assets/educational_page.png)
+> ![Educational Dashboard](assets/educational_page.png)
 
 ---
 
