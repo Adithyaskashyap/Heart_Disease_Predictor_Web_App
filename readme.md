@@ -6,7 +6,7 @@ HeartCare AI is a specialized web application that leverages machine learning to
 
 ### 1. Landing Page
 The home interface introduces the HeartCare AI system and provides quick access to the prediction models and the educational dashboard.
-> **Screenshot Link:** ![Home Page](assets/home_page.png)
+> ![Home Page](assets/home_page.png)
 
 ### 2. ML Prediction Interfaces
 Each model (Decision Tree, Logistic Regression, and SVM) features a dedicated form where users can input patient metrics like Age, Cholesterol, and Max Heart Rate to receive instant risk assessments.
